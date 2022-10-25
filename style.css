@@ -108,6 +108,11 @@ footer{
     nav ul, nav .logo{
         display: flex;
     }
+
+    .shoe{
+        width: 60vh;
+      
+  }
     .main {
       
     }
@@ -117,31 +122,5 @@ footer{
     nav{
         padding: 0 8rem 0 8rem;
     }
-  }
-
-/** 
-
-@media all and (max-width: 1280px) { 
-    
-    
-}
-
-@media all and (min-width: 700px) and (max-width: 1024px) {
-    nav{
-        padding: 0 2.6rem 0 2.6rem;
     }
- }
 
-@media all and (min-width: 480px) and (max-width: 768px) { 
-   nav div, nav ul {
-    display: none;
-   }
-}
-
-@media all and (max-width: 480px) { 
-    nav div, nav ul{
-        display: none;
-    }
-}
-
- **/
