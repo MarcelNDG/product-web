@@ -1,4 +1,7 @@
-let menuBtn = document.getElementById("hmbg")
+let menuBtn = document.getElementById("hmbg");
+let mobileBtn = document.getElementById("mobileBtn");
+
+let mobileMenu = document.getElementById("mobileMenu");
 
 console.log(menuBtn);
 
@@ -18,7 +21,14 @@ if (myArray[0] < 4) {
     
 }*/
 
-menuBtn.addEventListener("click", function click(
-) {
+menuBtn.addEventListener("click", function click() {
+    console.log("holo");
+   // mobileMenu.style.display = "flex"; 
+    mobileMenu.classList.add("active") 
+})
+
+mobileBtn.addEventListener("click", function click() {
     console.log("holo"); 
+   // mobileMenu.style.display = "none"
+    mobileMenu.classList.remove("active") 
 })

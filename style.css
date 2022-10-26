@@ -7,14 +7,17 @@
 }
 
 body{
-    background-color: #2b2b2b;
+   
+    height: 100vh;
     box-sizing: border-box;
     font-family: "Montserrat Alternates";
-    background-image: url("/img/wall.png");
+    background-image:url("img/wall.png"); 
+    background-position: -100vw;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
     justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    
 }
 
 /** Nav **/
@@ -34,15 +37,14 @@ nav .logo {
     color: #fff;
 }
 
-ul{
+nav ul{
    display: none;
    margin: 0;
    width: 28rem;
    font-weight: 500;
    align-items: center;
    text-align: center;
-   justify-content: space-between;
-   
+   justify-content: space-between;   
 }
 
 ul li{
@@ -52,7 +54,6 @@ ul li{
 ul li a {    
     color: #fff;
     text-decoration: none;
-
 }
 
 .hmbg{
@@ -62,28 +63,105 @@ ul li a {
 }
 
 /** Menu **/
+.mobileMenu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #2b2b2b;
+    color: #fff;   
+    height: 100vh;
+    width: 100vw;
+    transform: translateX(-100vw);
+    transition:ease-out 0.2s;
+    
+}
 
+.mobileLinkWrap{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 1rem 4rem;
+    height: 24rem;
+    transition:ease-out 0.2s;
+    
+}
+
+.active{
+    transform: translateX(0vw);
+    transition:ease-out 0.2s;
+}
+
+.mobileLinkWrap ul{
+    margin: 0;
+}
+
+.mobileLinkWrap ul li{
+    margin: 0;
+    width: 12rem;
+    padding:  1rem 0.4rem;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 1.6rem;
+    border-bottom: rgb(98, 97, 97) 1px solid;
+}
+
+.mobileLinkWrap ul li:nth-child(5){
+    border-bottom: none;
+}
+
+.mobileBtn{
+    margin-left: auto;
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    padding: 0 1.6rem 0 1.6rem;
+    cursor: pointer; 
+}
+
+.mobileNav{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    /* background-color: rgb(84, 84, 84); */
+}
 
 
 /** Main **/
 
 main {
-    position: relative;
     display: flex;
     
-    ;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center; 
+    z-index: 10;   
 }
 
 .shoe{
     width: 20rem;
     max-width: 36rem;
+    
 }
 
 .wall{
     position: fixed;
+}
+
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+.titleContainer h1{
+    color: #fff;
+    font-size: 18vw;    
 }
 
 /** Footer **/
@@ -100,6 +178,10 @@ footer{
 
 
 @media only screen and (min-width: 700px) {
+    body{
+         
+        background-position: 0vw;
+    }
 
     .hmbg{
         display: none;
@@ -109,12 +191,20 @@ footer{
         padding: 0 1.4rem 0 1.4rem;  
     }
 
+    .mobileMenu{
+        display: none;
+    }
+
     nav ul, nav .logo{
         display: flex;
     }
 
     .shoe{
         width: 60vh;      
+  }
+
+  .titleContainer h1{
+    font-size: 18vw;
   }
     
 }
@@ -123,5 +213,8 @@ footer{
     nav{
         padding: 0 8rem 0 8rem;
     }
+    .titleContainer h1{
+        font-size: 15rem;
+      }
 }
 
