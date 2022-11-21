@@ -2,8 +2,9 @@ let menuBtn = document.getElementById("hmbg");
 let mobileBtn = document.getElementById("mobileBtn");
 
 let mobileMenu = document.getElementById("mobileMenu");
+let body = document.getElementById("body");
 
-console.log(menuBtn);
+console.log(screenX);
 
 /* let myArray = [1,2,3,4,"five"]
 
@@ -32,3 +33,4 @@ mobileBtn.addEventListener("click", function click() {
    // mobileMenu.style.display = "none"
     mobileMenu.classList.remove("active") 
 })
+
