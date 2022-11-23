@@ -6,9 +6,11 @@
     padding: 0;
 }
 
-body{
-   
-    
+a:visited{
+    color: #fff;
+}
+
+body{  
     position: relative;
     box-sizing: border-box;
     font-family: "Montserrat Alternates";
@@ -16,7 +18,7 @@ body{
     background-position: -100vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+    background-position: cover;
     flex-direction: column;
     position: relative;
     
@@ -30,6 +32,8 @@ nav{
     text-align: center;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 5;    
 }
 
 nav .logo {
@@ -54,12 +58,16 @@ ul li{
 }
 
 ul li a {    
+    cursor: pointer;
     color: #fff;
     text-decoration: none;
+    
 }
 
 .hmbg{
-    width: 3rem;
+    
+    padding-top: 1rem;
+    width: 2.6rem;
     margin-left: auto;
     cursor: pointer;
     z-index: 20;
@@ -70,6 +78,7 @@ ul li a {
     top: 0;
     display: flex;
     height: 100vh;
+    opacity: 0;
     width: 100%;
     transform: translateX(-100vw);
     transition:ease-out 0.2s;    
@@ -86,55 +95,68 @@ ul li a {
     text-align: center;
     justify-content: center;
     padding: 1rem 4rem;
-    height: 24rem;
-    transition:ease-out 0.2s;
+    height: 100%;
+    max-height: 22rem;
+    transition:ease-out 0.4s;
     
 }
 
 .active{
     transform: translateX(0vw);
-    transition:ease-out 0.2s;
+    transition:ease-out 0.4s;
+    opacity: 1;
 }
 
-.mobileLinkWrap ul{
+.mobileLinkWrap ul{   
+   
     margin: 0;
 }
 
 .mobileLinkWrap ul li{
     margin: 0;
-    width: 12rem;
-    padding:  1rem 0.4rem;
+    width: 13rem;
+    padding:  0.3rem 0rem;
     font-family: "Roboto";
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     border-bottom: rgb(98, 97, 97) 1px solid;
 }
 
+.mobileLinkWrap ul li a{
+  width: 100%;
+}
+
 .mobileLinkWrap ul li:nth-child(5){
+    
     border-bottom: none;
 }
 
-.mobileBtn{
-    margin-left: auto;
-    cursor: pointer;
-    height: 3rem;
-    width: 3rem;
-    padding: 0 1.6rem 0 1.6rem;
-    cursor: pointer; 
-}
-
 .mobileNav{
+    top:1px;
+    right: 1px;    
     display: flex;
     align-items: center;
-    height: 5rem;
+    height: 10vh;
+    position: absolute;
     /* background-color: rgb(84, 84, 84); */
+}
+
+.mobileBtn{
+    
+    margin-left: auto;
+    cursor: pointer;
+    height: 2.4rem;
+    width: 2.4rem;
+    padding: 1rem 1.6rem 0 1.6rem;
+    cursor: pointer; 
+    
 }
 
 
 /** Main **/
 
 main {
-    height: 80vh;
+    height: 90vh;
     position: relative;
     display: flex;    
     align-items: center;
@@ -143,8 +165,8 @@ main {
 }
 
 .shoe{
-    width: 20rem;
-    max-width: 36rem;    
+    width: 44vw;
+    max-width: 20rem;    
 }
 
 .shoeDesktop{
@@ -180,6 +202,7 @@ footer{
     font-family: "Roboto";
     height: 4rem;
     color: #fff;
+    background-color: #0a0118;
 }
 
 
@@ -195,6 +218,10 @@ footer{
     text-align: center;
     position: relative;
     background-color: #150111;
+    background-image: url("/img/featuresBG.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 500px;
 }
 
@@ -271,7 +298,8 @@ footer{
     background-color: #08283F;
     border-radius: 8px;
     height: 500px;
-    width: 300px;
+    width: 84vw;
+    max-width: 300px;
     padding: 1rem 0rem;
 }
 
@@ -295,7 +323,8 @@ footer{
     text-align: left;
 }
 .store img{
-    width: 270px;
+    width: 80vw;
+    max-width: 270px;
     height: 144px;
 }
 .storeData{
@@ -324,17 +353,17 @@ footer{
 /* ----------- Reserve PAGE ---------------- */
 
 .reserve{
-    height: 600px;
+    height: 680px;
     position: relative;
     flex-direction: column;    
     text-align: center;    
 }
 
 .reserve h2{
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 .reserve h3{
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: lighter;
 }
 .reserveBG{
@@ -349,11 +378,11 @@ footer{
 .reserveWrap{
     color: #fff;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
-    padding:  2rem 0;
-    
+    padding:  4rem 0;    
     z-index: 10;
 }
 
@@ -405,7 +434,34 @@ form input{
 
 .homepage{
     height: 500px;
-    background-color: #131313;
+    background-image: url("/img/homepageBG.png") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+.homepage img{
+    width: 80vw;
+    max-width: 24rem;
+}
+.homepage a {
+    text-decoration: none;
+}
+.homepageWrap{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90vw;
+    height: 56%;
+}
+.homepage h2{
+    font-size: 2.4rem;
+}
+.homepage h3{
+    font-size: 1.8rem;
+    font-weight: lighter;
 }
 
 @media only screen and (min-width: 700px) {
@@ -426,7 +482,8 @@ form input{
        display: flex;
    }
    .shoe{
-       width: 60vh;      
+    width: 55vw;
+       max-width: 34rem;      
   } 
   .titleContainer h3{
     font-size: 15vw;
@@ -464,6 +521,15 @@ form input{
   }
 
 
+.reserve h2{
+    font-size: 2.4rem;
+}
+.reserve h3{
+    font-size: 1.8rem;
+    font-weight: lighter;
+}
+
+
 .stores{
   height: 700px;
 }
@@ -483,11 +549,6 @@ form input{
     height: 100%;
 }
 
-
-
-
-
-
 }
 
   @media only screen and (min-width: 1280px){
@@ -496,6 +557,10 @@ form input{
     }
     .titleContainer h1{
         font-size: 15rem;
+    }
+
+    .shoe{
+        max-width: 34rem;      
     }
 
    
