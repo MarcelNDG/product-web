@@ -11,6 +11,11 @@ a:visited{
 }
 
 body{  
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: relative;
     box-sizing: border-box;
     font-family: "Montserrat Alternates";
@@ -18,7 +23,6 @@ body{
     background-position: -100vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: cover;
     flex-direction: column;
     position: relative;
     background-size: cover;
@@ -28,13 +32,14 @@ body{
 /** Nav **/
 nav{    
     display: flex;
-    height: 10vh;
-    padding: 0 1.4rem 0 1.4rem;   
+    height: 11vh;
+    width: 84vw;
     text-align: center;
     align-items: center;
     justify-content: space-between;
     position: relative;
     z-index: 5;    
+    font-family: 'Roboto';
 }
 
 nav .logo {
@@ -47,8 +52,9 @@ nav .logo {
 nav ul{
    display: none;
    margin: 0;
-   width: 28rem;
+   width: 52vw;
    font-weight: 500;
+   font-size: 1.2rem;
    align-items: center;
    text-align: center;
    justify-content: space-between;   
@@ -469,7 +475,7 @@ form input{
     font-weight: lighter;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 760px) {
    body{
         
        background-position: 0vw;
@@ -478,7 +484,7 @@ form input{
        display: none;
    }
    nav{
-       padding: 0 1.4rem 0 1.4rem;  
+      
    }
    .mobileMenu{
        display: none;
@@ -558,7 +564,11 @@ form input{
 
   @media only screen and (min-width: 1280px){
     nav{
-        padding: 0 8rem 0 8rem;
+       
+    }
+
+    nav ul{
+       width: 36vw;
     }
     .titleContainer h1{
         font-size: 15rem;
@@ -601,4 +611,13 @@ form input{
         width: 70vw;
     }
 }
+
+ @media only screen and (min-width: 1920px){
+    nav{
+        width: 64vw;
+    }
+     nav ul{
+       width: 26vw;
+    }
+ }
 
