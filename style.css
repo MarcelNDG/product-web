@@ -43,10 +43,19 @@ nav{
 }
 
 nav .logo {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     font-weight: bold;
     font-size: 1.6rem;
     color: #fff;
+}
+
+nav .logo span{
+    font-family: 'Montserrat Alternates';
+    margin-left: 10px;
+    font-size: 1.8rem;
 }
 
 nav ul{
@@ -73,7 +82,6 @@ ul li a {
 
 .hmbg{
     
-    padding-top: 1rem;
     width: 2.6rem;
     margin-left: auto;
     cursor: pointer;
@@ -220,19 +228,21 @@ footer{
 
 .features{
     
-    padding: 6vh 2vw;
+    height: 500px;
+    width: 100%;
+    padding: 4rem 0 4rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     
+    
     text-align: center;
     position: relative;
     background-color: #150111;
-    background-image: url("/img/featuresBG.png");
+    background-image: url("img/featuresBG.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 500px;
 }
 
 .titles{
@@ -255,11 +265,12 @@ footer{
 }
 
 .features p{
-    font-size: 14px;
+    font-family: 'Roboto';
+    font-size: 1.2rem;
     margin-top: 6vh;
     color: #fff;
     width: 80vw;
-    max-width: 40rem;
+    max-width: 566px;
 }
 .features .titles p{
     display: none;
@@ -505,7 +516,7 @@ form input{
 
 
   .features{
-    height: 700px;
+    height: 740px;
   }
   
   .features h3{
@@ -575,16 +586,16 @@ form input{
     }
 
     .shoe{
-        max-width: 34rem;      
+        max-width: 34rem;
+        margin-left: 10vw;      
     }
 
    
     .features{
         
         flex-direction: row;
-        justify-content: space-around;
-        text-align: left;
-        padding: 6vh 6vw;        
+        text-align: left;        
+        
     }
 
     .features p{
