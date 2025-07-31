@@ -285,22 +285,28 @@ footer{
 /* ----------- STORES PAGE ---------------- */
 
 .stores{
-    margin-top: 5rem;
-    padding: 6vh 2vw;
+
+    width: 100%;
+    height: fit-content;
+    padding: 4rem 0 6rem 0;
     display: flex;
     flex-direction: column;
-    align-items: center;    
+    align-items: center;
     text-align: center;
+    justify-content: center;
     position: relative;
-    background-color: #030A22;
-    height: fit-content;
+    background-color: #000000;
 }
 
 .stores h2{
     color: #fff;
-    font-weight:100;
+    font-family: 'Roboto';
+    font-weight:500;
+    font-style: italic;
     height: 3rem;
-    font-size: 2rem;
+    font-size: 4rem;
+    height: fit-content;
+    margin-bottom: 2rem;
 }
 
 .storeContainer{
@@ -313,41 +319,46 @@ footer{
 }
 
 .store{
+    height: 480px;
+    width: 304px;
+    padding: 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
-    background-color: #08283F;
-    border-radius: 8px;
-    height: 500px;
-    width: 84vw;
-    max-width: 300px;
-    padding: 1rem 0rem;
+    font-family: 'Roboto';
+    background-color: #1a2027;
+    border-radius: 4px;
 }
 
 .storeInfo{
-    height: 100px;
-    width: 90%;
-    text-align: left;
+    width: 96%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding-top: 1rem;
+    justify-content: center;
+    padding-top: 10px;
+    align-items: center;
+    height: 85px;
 }
+
+.storeInfo p{
+  margin-top: 2px;
+}
+
 
 .store h3{
     text-align: left;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 40px;
+    font-weight: 400;
 }
 .store p{
-    font-size: 14px;
+    font-size: 21px;
     text-align: left;
 }
 .store img{
-    width: 80vw;
-    max-width: 270px;
-    height: 144px;
+    width: 303px;
+    height: 173px;
 }
 .storeData{
     display: flex;
@@ -355,20 +366,26 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-top: 1rem;
-    height: 6rem;
-    width: 86%;
+    padding-top: 1.6rem;
+    height: 160px;
+    width: 98%;
+    padding-right: 0.7rem;
+}
+
+.storeData .data p {
+    font-size: 18px;
 }
 
 .data{
     display: flex;
     flex-direction: row;
-    align-items: center;    
+    align-items: center;   
+    justify-content: center; 
 }
 
 .data img{
-    width: 16px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     padding-right: 0.4rem;
 }
 
@@ -557,11 +574,16 @@ form input{
 }
 
 .stores h2{
-    font-size: 2.4rem;
+    
 }
 
 .storeWrap{
-  height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    
 }
 
 .storeContainer{
@@ -587,15 +609,19 @@ form input{
 
     .shoe{
         max-width: 34rem;
-        margin-left: 10vw;      
+           
     }
 
    
     .features{
         
         flex-direction: row;
-        text-align: left;        
+        text-align: left;      
         
+    }
+
+    .features img{
+         margin-left: 10vw;  
     }
 
     .features p{
@@ -621,6 +647,10 @@ form input{
     .storeContainer{
         width: 70vw;
     }
+
+    .storeWrap{
+        max-width: 54vw;
+    }
 }
 
  @media only screen and (min-width: 1920px){
@@ -629,6 +659,10 @@ form input{
     }
      nav ul{
        width: 26vw;
+    }
+
+     .storeWrap{
+        max-width: 40vw;
     }
  }
 
