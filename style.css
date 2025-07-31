@@ -11,7 +11,7 @@ a:visited{
 }
 
 :root {
-    --activeNav-color: #171717;
+    --activeNav-color: rgba(0,0,0,0.6);
     --transition-speed: 0.3s;
 }
 
@@ -60,6 +60,7 @@ nav{
     position: fixed;
     padding-left: 8vw;
     padding-right: 8vw;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 nav .logo {
@@ -70,6 +71,14 @@ nav .logo {
     font-weight: bold;
     font-size: 1.6rem;
     color: #fff;
+    
+}
+
+nav a {
+
+    text-decoration: none;
+    color: #fff;
+
 }
 
 nav .logo span{
@@ -437,7 +446,7 @@ footer{
     font-family: 'Roboto';
     font-style: italic;
     font-size: 1.8rem;
-    margin-top: 10px;
+    margin-top: 6px;
     font-weight: 300;
     transform: rotate(-1deg);
 }
