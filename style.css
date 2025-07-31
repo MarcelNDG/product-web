@@ -10,6 +10,11 @@ a:visited{
     color: #fff;
 }
 
+:root {
+    --activeNav-color: #171717;
+    --transition-speed: 0.3s;
+}
+
 body{  
 
     display: flex;
@@ -400,15 +405,26 @@ footer{
     position: relative;
     flex-direction: column;    
     text-align: center;    
+    background-color: #150111;
+    background-image: url("img/reservebg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .reserve h2{
     font-size: 2.6rem;
+    font-family: 'Roboto';
+    font-style: italic;
+    transform: rotate(-1deg);
 }
 .reserve h3{
+    font-family: 'Roboto';
+    font-style: italic;
     font-size: 1.8rem;
     margin-top: 10px;
-    font-weight: lighter;
+    font-weight: 300;
+    transform: rotate(-1deg);
 }
 .reserveBG{
     background-color: rgb(0,0,0);
@@ -458,8 +474,6 @@ text-align: left;
 width: 90%;
 }
 
-
-
 form input{
    height: 2rem;
    width: 90%;
@@ -470,20 +484,33 @@ form input{
    border: none;
 }
 
+form :nth-child(2) {
+    margin-top: -34px;
+    font-size: 1rem;
+}
+
 form :nth-child(3){
-    margin-top: 14px;
+    margin-top: -24px;
+}
+form :nth-child(4){
+    margin-top: -34px;
 }
 
 .submit{
-    height: 50px;
-    width: 170px;
-    font-size: 1.8rem;
+    height: 38px;
+    width: 130px;
+    font-size: 1.4rem;
     border-radius: 8px;
     background-color: rgb(205, 4, 182);
-    margin-top: 2rem;
+    margin-top: -22px;
     border: none;
     color: #fff;
     padding: 0;
+}
+
+.formText{
+    font-size: 1.5rem;
+    margin-top: 1.8rem;
 }
 
 /* ----------- homepage PAGE ---------------- */
@@ -586,7 +613,6 @@ form :nth-child(3){
 }
 .reserve h3{
     font-size: 2.4rem;
-    font-weight: lighter;
 }
 
 
@@ -594,9 +620,7 @@ form :nth-child(3){
   height: 700px;
 }
 
-.stores h2{
-    
-}
+
 
 .storeWrap{
     
@@ -671,6 +695,14 @@ form :nth-child(3){
 
     .storeWrap{
         max-width: 54vw;
+    }
+
+    .reserve h2{
+    font-size: 4.4rem;
+    }
+
+    .reserve h3{
+        font-size: 2.8rem;
     }
 }
 

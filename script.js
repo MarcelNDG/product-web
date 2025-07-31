@@ -4,6 +4,9 @@ let mobileBtn = document.getElementById("mobileBtn");
 let mobileMenu = document.getElementById("mobileMenu");
 let body = document.getElementById("body");
 
+const navBar = document.getElementById("mainNavbar");
+const stickyOffset = navBar.offsetTop;
+
 console.log(screenX);
 
 /* let myArray = [1,2,3,4,"five"]
@@ -34,3 +37,14 @@ mobileBtn.addEventListener("click", function click() {
     mobileMenu.classList.remove("active") 
 })
 
+function handleScroll(){
+    if(window.pageYOffset > stickyOffset){
+        navBar.classList.add("sticky");
+    }
+    else
+    {
+        navBar.classList.remove("sticky");
+    }
+}
+
+window.addEventListener("scroll", handleScroll);
