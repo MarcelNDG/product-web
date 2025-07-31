@@ -34,6 +34,8 @@ body{
     
 }
 
+
+
 /** Nav **/
 nav{    
     display: flex;
@@ -45,6 +47,19 @@ nav{
     position: relative;
     z-index: 5;    
     font-family: 'Roboto';
+    transition: var(--transition-speed);
+}
+/** Nav sticky **/
+
+.sticky{
+    top: 0;
+    z-index: 1000;
+    width: 84%;
+    height: 6vh;
+    background-color: var(--activeNav-color);
+    position: fixed;
+    padding-left: 8vw;
+    padding-right: 8vw;
 }
 
 nav .logo {
