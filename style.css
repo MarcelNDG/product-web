@@ -45,7 +45,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     position: relative;
-    z-index: 5;    
+    z-index: 100;    
     font-family: 'Roboto';
     transition: var(--transition-speed);
 }
@@ -53,7 +53,7 @@ nav{
 
 .sticky{
     top: 0;
-    z-index: 1000;
+    z-index: 99;
     width: 84%;
     height: 6vh;
     background-color: var(--activeNav-color);
@@ -127,8 +127,8 @@ ul li a {
     transform: translateX(-100vw);
     transition:ease-out 0.2s;    
     color: #fff;   
-    z-index: 30;
-    position: absolute;
+    z-index: 2000;
+    position: fixed;
     flex-direction: column;
     background-color: #2b2b2b;
 }
